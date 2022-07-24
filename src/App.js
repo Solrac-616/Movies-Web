@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import Pelicula from './components/pelicula';
+import Pagewrapper from './components/Pagewrapper';
+import peliculasJson from './Json/movies.json'
+import Pagination from './components/Pagination';
 
 function App() {
+
+	let peliculas = peliculasJson;
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+	  <Pagewrapper>
+
+			{peliculas.map(pelicula => 
+				<Pelicula name={pelicula.name} age={pelicula.age} punctuation={pelicula.punctuation} director={pelicula.director} director2={pelicula.director2} star1={pelicula.star1} star2={pelicula.star2} star3={pelicula.star3} date={pelicula.date} runtime={pelicula.runtime}protection={pelicula.protection} image={pelicula.image}>
+					{pelicula.description}
+		  	</Pelicula>
+			)}
+
+			<Pagination actual={2} total={4} onChange={(actual) => { 
+				alert(actual)
+			}} />
+
+		  
+	  </Pagewrapper> 
   );
 }
 
