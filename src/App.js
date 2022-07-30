@@ -22,8 +22,9 @@ function App() {
 
 			<Pagesingle>
 
-				
+
 				<Movielist />
+						
 
 				<PageColRight>
 
