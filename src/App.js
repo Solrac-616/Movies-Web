@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-import Pelicula from './components/pelicula';
+import Pelicula from './components/Pelicula/Pelicula';
 import Pagewrapper from './components/PageWrapper1/Pagewrapper.js';
 import peliculasJson from './Json/movies.json'
-import Pagination from './components/Pagination';
+import Pagination from './components/Pagination/Pagination';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Pagesingle from './components/Pagesingle/Pagesingle';
